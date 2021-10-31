@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: beige;
+
+}
+
+.container {
+    padding: 10px 20vh 0 20vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Dog Breads */
+    header {
+        width: 30vw;
+        padding: 10px 10px;
+        font-size: 1.3em;
+    }
+
+        .breads ul {
+            list-style: none;
+            margin-left: 20px;
+            text-align: left;
+        }
+
+        .breads li {
+            padding: 5px 0;
+        }
+        .breads a:link {
+            text-decoration: none;
+            cursor: pointer;   
+            color: rgb(60, 59, 59);
+            font-weight: 600;
+        }
+
+        .breads a:visited {
+            color: rgb(60, 59, 59);
+        }
+
+        .breads a:hover {
+            color: blue;
+        }
+
+        .breads a:active {
+            color: rgb(60, 59, 59);
+        }
+
+/* Description */
+.main {
+    width: 70vw;
+    padding: 0px 40px;
+    border-left: 1px solid grey;
+}
+    .dogPicture {padding: 5px 0px;}
+    .dogPicture img {
+        border-radius: 50%;
+        border: 2px solid gray;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        object-fit:fill;
+    }
+
+    tr th {
+        font-size: 1.6rem;
+        padding:10px 3px;
+    }
+
+    tr td:first-child {
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding:0 3px;
+
+    }
+
+    .info {
+        padding: 30px 0;
+    }

@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.container {
+    padding: 0 40vh 0 40vh;
+}
+
+/* Header  */
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid black;
+    }
+        h3 a {
+            cursor: pointer;
+            color: rgb(53, 52, 52);
+        }
+        
+        .list {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 0px;     
+            font-weight: 900;
+        }
+
+        .list a {
+            color: rgb(53, 52, 52);   
+            cursor: pointer;   
+            padding: 0px 5px;
+        }
+
+/* Text Area */
+    .main {}
+        .title {
+            padding: 20px 0px 10px 0px;
+        }
+        .subTitle {
+            padding: 10px 0px 10px 0px;
+            font-style: italic;
+            color: hsla(0, 0%, 21%, 0.8);
+            font-weight: 300;
+
+        }
+        .main > p {
+            padding: 10px 0;
+        }
+        .main li {
+            margin-left: 50px;
+            padding: 0.3px
+        } 
