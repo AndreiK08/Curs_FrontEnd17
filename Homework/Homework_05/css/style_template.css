@@ -26,10 +26,30 @@
 
 #navLinks {
     grid-area: nav;
-    background-color: red;
-    place-self: center;
-    height: 10vh;
+    align-content: center;
+
 }
+
+    .navLinks {
+        background-color: #25424d;
+    }
+
+    .navLinks ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .navLinks ul a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .navLinks ul a:hover {
+            background-image: linear-gradient( #ffffff, #ffffff);
+            background-position: bottom;
+            background-size: 80% 10% ;
+            background-repeat: no-repeat;
+        }
 
 #workMainPage {
     grid-area: work;
