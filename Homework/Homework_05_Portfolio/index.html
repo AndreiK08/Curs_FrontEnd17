@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_mobile.css">
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/9f98a551c8.js" crossorigin="anonymous"></script>
+    <!-- hamburger menu on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>AC_Portofolio</title>
+</head>
+<body>
+    <!-- Main Wrapper -->
+    <div class="wrapper">
+        <!-- Background IMG  -->
+        <div id="background" class="background" >
+                <!-- Main Name - Title -->
+                <h1 id="main-name-h1">Andrei Cîmpean</h1>
+                <h4>Web Developer</h4>
+        </div>
+           
+
+        <!-- Navigation Left -->
+        <div class="nav-left" id="nav-left">
+            <div class="intro-wrapper">
+                <!-- Photo & Name -->
+                <img src="Presentation_Site/img/profil/Andrei_3-square.jpg" alt="image" id="my-photo-small" >
+                <h3 id="nav-name">Andrei Cîmpean</h3>
+            </div>
+            <!-- Main menu -->
+            <div class="menu">
+                <ul id="nav" class="nav-menu">
+                    <li class="icon" >
+                        <a onclick="openHome()" id="home"><i class="fas fa-home"></i>Home</a>
+                    </li>
+                    <li>
+                        <a onclick="openAbout()"><i class="fas fa-user" ></i>About me</a>
+                    </li>
+                    <li>
+                        <a onclick="openResume()"><i class="fas fa-id-card" ></i>Resume</a>
+                    </li>
+                    <li>
+                        <a onclick="openPortofolio()"><i class="fas fa-columns"></i>Portfolio</a>
+                    </li>
+                    <li>
+                        <a onclick="openContact()"><i class="fas fa-envelope"></i>Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+    <a href="/" class="active">Andrei Cîmpean</a>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="menu()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+
+<!-- **** ABOUT ME PAGE **** -->
+    <div class="about-wrapper" id="about">
+        <!-- About Title -->
+        <div class="row-1">
+            <div class="border-box-top-left"></div>
+            <div class="about-title">
+                <h2 class="about-title-h2">About Me</h2>
+                <h5 class="about-descr">creative doer, ultimate worker, goal oriented</h5>
+            </div>
+            <a class="close-page" id="closeAbout" onclick="closeAbout()"><i class="fas fa-times"></i></a>
+        </div>
+        
+        <!-- About Info -->
+        <div class="about-info row-2">
+            <!-- About IMG -->
+            <div class="about-img"><img src="Presentation_Site/img/profil/Andrei_2-square.jpg" alt="image" id="my-photo-big" ></div>
+            <!-- About Description -->
+            <div class="about-info-descr">
+                <p>Aspiring <span>front-end developer</span>, active <span>classical musician</span>, experienced <span>event planner</span>, passionate <span>photographer</span>.</p>
+                <br>
+                <p>Finding innovative ways of approaching a problem or helping the team solve an issue is my creative outlet. Always learning new things and sharing my experiences with others is very satisfying. I love delivering valuable solutions to customers, and being a part of the development process. </p>
+            </div>
+            <!-- Info list -->
+            <div class="contact">
+                <ul class="info-list">
+                    <li>
+                        <span>Age</span>
+                        <p>36</p>
+                    </li>
+                    <li>
+                        <span>Residence</span>
+                        <p>Romania</p> 
+                    </li>
+                    <li>
+                        <span>Address</span>
+                        <p>Cluj-Napoca</p> 
+                    </li>
+                    <li>
+                        <span>e-mail</span>
+                        <p>0752 083 557</p> 
+                    </li>
+                    <li>
+                        <span>Freelance</span>
+                        <p>Available</p> 
+                    </li>
+                </ul>
+
+                <!-- Media Buttons -->
+                <div class="media-buttons">
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href=""><i class="fab fa-github-alt"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="services-title"><h3>Services</h3></div>
+        <div class="services-group row-3">
+            <div class="services-info"> 
+                <img src="Presentation_Site/img/services/web_design_icon.png" alt="" class="services-icon">
+                <h4>Custom Websites</h4>
+                <p>Custom websites are the solution when open-source software does not meet the functionality that you need built into your website.</p>
+            </div>
+            <div class="services-info"> 
+                <img src="Presentation_Site/img/services/creativity_icon.png" alt="" class="services-icon">
+                <h4>Web Dev</h4>
+                <p>A web developer with designing skill, taking full responsability for the collaboration with the UI/UX designers team.</p>
+            </div>
+            <div class="services-info"> 
+                <img src="Presentation_Site/img/services/advetising_icon.png" alt="" class="services-icon">
+                <h4>Solving puzzles</h4>
+                <p>Life is one big puzzle. I have always enjoyed knowing how and why things work. Once I learn how something works, I can use it more effectively. </p>
+            </div>
+            <div class="services-info"> 
+                <img src="Presentation_Site/img/services/photography_icon.png" alt="" class="services-icon">
+                <h4>Event Plannig</h4>
+                <p>Supporting clients with live interactivity and user support during their events, either remotely or onsit </p>
+            </div>
+         
+        </div>
+
+        <!-- Clients -->
+        <div class="services-title"><h3>Clients</h3></div>
+        <div class="services-group row-4">
+            <div class="client-block">
+                <img src="Presentation_Site/img/clients/client_1.png" alt="">
+            </div>
+            <div class="client-block">
+                <img src="Presentation_Site/img/clients/client_2.png" alt="">
+            </div>
+            <div class="client-block">
+                <img src="Presentation_Site/img/clients/client_3.png" alt="">
+            </div>
+            <div class="client-block">
+                <img src="Presentation_Site/img/clients/client_4.png" alt="">
+            </div>
+            <div class="client-block">
+                <img src="Presentation_Site/img/clients/client_5.png" alt="">
+            </div>
+            <div class="client-block">
+                <img src="Presentation_Site/img/clients/client_6.png" alt="">
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="services-title"><h3>Testimonials</h3></div>
+        <div class="services-group row-5">
+            <div class="testimonial-block">
+                <p><i> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto amet mollitia unde est sint, numquam eum! Cum quam quaerat porro."</i></p>
+                <div class="testimonial-client">
+                    <img src="Presentation_Site/img/testimonials/testimonial_photo_1.jpg" alt="">
+                    <div class="testimonial-author-block">
+                        <p class="testimonial-author">Victoria Beckham </p>
+                        <p class="testimonial-firm">Posh Spice</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-block">
+                <p><i> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto amet mollitia unde est sint, numquam eum! Cum quam quaerat porro."</i></p>
+                <div class="testimonial-client">
+                    <img src="Presentation_Site/img/testimonials/testimonial_photo_3.jpg" alt="client photo">
+                    <div class="testimonial-author-block">
+                        <p class="testimonial-author">Raul Gonzales Blanco</p>
+                        <p class="testimonial-firm">Raul Footbal Club</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-block">
+                <p><i> "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto amet mollitia unde est sint, numquam eum! Cum quam quaerat porro."</i></p>
+                <div class="testimonial-client">
+                    <img src="Presentation_Site/img/testimonials/testimonial_photo_2.jpg" alt="">
+                    <div class="testimonial-author-block">
+                        <p class="testimonial-author">Steve McManaman</p>
+                        <p class="testimonial-firm">Liverpool - Madrid Transport</p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+
+<!-- **** RESUME **** -->
+<div class="resume-wrapper" id="resume">
+    <!-- Resume Title -->
+    <div class="row-1">
+        <div class="border-box-top-left"></div>
+        <div class="about-title">
+            <h2 class="about-title-h2">Resume</h2>
+            <h5 class="about-descr">the journey so far</h5>
+        </div> 
+        <a class="close-page" id="closeResume" onclick="closeResume()"><i class="fas fa-times"></i></a>
+    </div>
+    <!-- Resume Info -->
+    <div class="resume-wrapper-info">
+        <!-- Column 1 -->
+        <div class="column">
+            <div class="resume-title">
+                <h3>Education</h3>
+            </div>
+            <div class="timeline-event">
+                <div class="event-date">2016</div>
+                <div class="event-block">
+                    <h4 class="event-name">Specialization Course</h4>
+                    <span class="event-description">University</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, expedita.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="event-date">2019</div>
+                <div class="event-block">
+                    <h4 class="event-name">Specialization Course</h4>
+                    <span class="event-description">University</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, expedita.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="event-date">2021</div>
+                <div class="event-block">
+                    <h4 class="event-name">Specialization Course</h4>
+                    <span class="event-description">University</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, expedita.</p>
+                </div>
+            </div>
+            <a href="./Presentation_Site/CV/CV_Andrei_Cimpean.pdf" download="CV_AndreiCimpean" class="cv-button" target="_blank" >Download CV</a>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="column">
+            <div class="resume-title">
+                <h3>Experience</h3>
+            </div>
+            <div class="timeline-event">
+                <div class="event-date">2013</div>
+                <div class="event-block">
+                    <h4 class="event-name">Work 1</h4>
+                    <span class="event-description">Employer</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, expedita.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="event-date">2015</div>
+                <div class="event-block">
+                    <h4 class="event-name">Work 2</h4>
+                    <span class="event-description">Employer</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, expedita.</p>
+                </div>
+            </div>
+            <div class="resume-event">
+                <div class="event-date">2017-Current</div>
+                <div class="event-block">
+                    <h4 class="event-name">Work 3</h4>
+                    <span class="event-description">Employer</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, expedita.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="column">
+            <div class="resume-title">
+                <h3>Coding Skills</h3>
+            </div>
+            <h4>HTML</h4>
+            <div class="skills-container">
+                <div class="skills HTML"></div>
+            </div>
+            <h4>CSS</h4>
+            <div class="skills-container">
+                <div class="skills CSS"></div>
+            </div>
+            <h4>Java Script</h4>
+            <div class="skills-container">
+                <div class="skills JavaScrip"></div>
+            </div>
+   
+            <!-- Other Skills -->
+            <div class="resume-title">
+                <h3>Other Skills</h3>
+            </div>
+            <h4>Office Suite</h4>
+            <div class="skills-container">
+                <div class="skills OFFICE"></div>
+            </div>
+            <h4>ADOBE Creative Suite</h4>
+            <div class="skills-container">
+                <div class="skills AdobeCreativeSuite"></div>
+            </div>
+            <div class="resume-title">
+                <h3>Non-technical Skills</h3>
+            </div>
+            <h4>Creative ability</h4>
+            <div class="skills-container">
+                <div class="skills creativity"></div>
+            </div>  
+            <h4>Time Management</h4>
+            <div class="skills-container">
+                <div class="skills time"></div>
+            </div>
+            <h4>Attention to detail</h4>
+            <div class="skills-container">
+                <div class="skills detail"></div>
+            </div>
+            <h4>Team Leader</h4>
+            <div class="skills-container">
+                <div class="skills teamLeader"></div>
+            </div>
+            <!-- Language Siklls -->
+            <h4>English</h4>
+            <div class="skills-container">
+                <div class="skills english"></div>
+            </div>
+            <h4>Italian</h4>
+            <div class="skills-container">
+                <div class="skills italian"></div>
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+
+<!-- **** PORTOFOLIO **** -->
+<div class="resume-wrapper" id="portofolio">
+    <!-- Resume Title -->
+    <div class="row-1">
+        <div class="border-box-top-left"></div>
+        <div class="about-title">
+            <h2 class="about-title-h2">Portfolio</h2>
+            <h5 class="about-descr">work in progress</h5>
+        </div> 
+        <a class="close-page" id="closePortofolio" onclick="closePortofolio()"><i class="fas fa-times"></i></a>
+    </div>
+
+    <!-- Image Galery -->
+    <div class="image-galery">
+        <div class="gallery">
+            <figure class="gallery__item gallery-item-1">
+                <img src="Presentation_Site/img/portofolio/1.jpg" alt="Gallery image 1" class="gallery_img">
+            </figure>
+            <figure class="gallery__item gallery-item-2">
+                <img src="Presentation_Site/img/portofolio/2.jpg" alt="Gallery image 2" class="gallery_img">
+            </figure>
+            <figure class="gallery__item gallery-item-3">
+                <img src="Presentation_Site/img/portofolio/3.jpg" alt="Gallery image 3" class="gallery_img">
+            </figure>
+            <figure class="gallery__item gallery-item-4">
+                <img src="Presentation_Site/img/portofolio/4.jpg" alt="Gallery image 4" class="gallery_img">
+            </figure>
+            <figure class="gallery__item gallery-item-5">
+                <img src="Presentation_Site/img/portofolio/5.jpg" alt="Gallery image 5" class="gallery_img">
+            </figure>
+            <figure class="gallery__item gallery-item-6">
+                <img src="Presentation_Site/img/portofolio/6.jpg" alt="Gallery image 6" class="gallery_img">
+            </figure>
+        </div>
+    
+    </div>
+
+</div>
+
+
+<!-- **** CONTACT **** -->
+<div class="resume-wrapper" id="contact">
+    <!-- Contact Title -->
+    <div class="row-1">
+        <div class="border-box-top-left"></div>
+        <div class="about-title">
+            <h2 class="about-title-h2">Contact</h2>
+            <h5 class="about-descr">let's get in touch</h5>
+        </div> 
+        <a class="close-page" id="closeContact" onclick="closeContact()"><i class="fas fa-times"></i></a>
+    </div>
+
+    <div class="row-2">
+    <!-- Get in Touch Column -->
+        <div class="column-1">
+            <div class="services-title"><h3>Get in Touch</h3></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime incidunt dolor ducimus tempora libero, commodi odio qui odit, sequi minima assumenda sed earum rem magni reprehenderit vel dolorum temporibus.</p>
+            <div class="contact-icons">
+                <div class="icon-txt">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h5>Cluj-Napoca, Romania</h5>
+                </div>
+                <div class="icon-txt">
+                    <i class="fas fa-envelope"></i>
+                    <h5>andreicimpean08@gmail.com</h5>
+                </div>
+                <div class="icon-txt">
+                    <i class="fas fa-phone"></i>
+                    <h5>+40 752 083557</h5>
+                </div>
+                <div class="icon-txt">
+                    <i class="fas fa-check-circle"></i>
+                    <h5>Freelance Available</h5>
+                </div>
+            </div>
+        </div>
+
+    <!-- Contact Form Column -->
+        <div class="column-2">
+            <div class="services-title"><h3>Contact Form</h3></div>
+            <div class="form-group">
+                <i class="far fa-user"></i>
+                <input id="form_name" type="text" name="name" class="form-control" placeholder="Full Name" required="required" data-error="Name is required.">
+            </div>
+            <div class="form-group">
+                <i class="far fa-envelope"></i>
+                <input id="form_email" type="email" name="email" class="form-control" placeholder="Email Address" required="required" data-error="Valid email is required.">
+            </div>
+            <div class="form-group">
+                <i class="far fa-comment" id="comment_icon" ></i>
+                <textarea id="form_message" name="message" class="form-control" placeholder="Message for Me" rows="5" required="required" data-error="Please, leave me a message."></textarea>
+            </div>
+            
+            <button class="form-button">Send message</button>
+        </div>
+    
+
+    </div>
+
+
+   
+    <!-- JS Script -->
+    <script src="app.js"></script>
+</body>
+</html>
