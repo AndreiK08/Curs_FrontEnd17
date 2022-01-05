@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- Confirmation Banner -->
+    <div class="confirm-container" id="banner">
+        <i class="fas fa-check-circle"></i>
+        <p>Thank you for contacting us, <span id="user-name"></span></p>
+        <a><i class="fas fa-times" onclick="resetForm()"></i></a>
+    </div>
+
+    <!-- Form Container -->
+    <container class="form-box">
+        <form action="" id="form">
+            <!-- Name -->
+            <div class="name">
+                <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                <small id="firstName-msg"></small>
+            </div>
+            <div class="name">
+                <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+                <small id="lastName-msg"></small></small>
+            </div>
+            <!-- Gender -->
+            <div class="gender">
+                <p>Gender</p>
+                <div>
+                    <input type="radio" id="male-input" name="gender-input" value="M">
+                    <label for="male-input">M</label>
+                </div>
+                <div>
+                    <input type="radio" id="female-input" name="gender-input" value="F"
+                    checked>
+                    <label for="female-input">F</label>
+                </div>
+            </div>
+            <!-- Text -->
+            <div class="name">
+                <textarea name="text" rows="10" cols="40" id="text" placeholder="Your message here..."></textarea>
+                <small></small>
+                <!-- Submit Button -->
+                <button type="submit" value="Submit" id="submit-btn" onclick="validateInput()">Submit</button>
+            </div>
+        </form>
+        <div class="img"><img src="form-img.png" alt="" srcset=""></div>
+    </container>
+
+
+    <script src="form.js"></script>
+
+</body>
+</html>
