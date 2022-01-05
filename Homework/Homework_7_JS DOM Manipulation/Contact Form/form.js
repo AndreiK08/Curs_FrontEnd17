@@ -19,35 +19,32 @@ form.addEventListener('submit', (event) => {
     formData.append('First Name:', firstName.value );
     formData.append('Last name:', lastName.value );
     formData.append('Text message:', text.value);
-
     console.log(...formData);
-
-
 })
 
 
 
 
 function validateInput() {
+    var noNumbers = /^[a-zA-Z]+$/;
     // Checking if firstName is empty
-    if(firstName.value.trim()==="" ){
-        onError(firstName, "First Name cannot be empty");
+    if(!firstName.value.match(noNumbers) || firstName.value.trim()===""){
+        onError(firstName, "Please write a valid name");
         firstName.focus();
     } else {
         onSucces(firstName);
-
     }
 
      // Checking if lastName is empty
-     if(lastName.value.trim()===""){
-        onError(lastName, "Last Name cannot be empty");
+     if(!lastName.value.match(noNumbers) || lastName.value.trim()===""){
+        onError(lastName, "Please write a valid name");
         firstName.focus();
         return false;
     }
-
     else {
         onSucces(lastName);
     }
+
     // Checking if text is empty
     if(text.value.trim()===""){
         onError(text, "Text cannot be empty");
@@ -90,7 +87,6 @@ function showConfirmBanner(){
 function resetForm() {
     form.reset();
     banner.style.visibility="hidden";
-
 }
 
 
