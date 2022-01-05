@@ -23,11 +23,9 @@ form.addEventListener('submit', (event) => {
 })
 
 
-
-
 function validateInput() {
     var noNumbers = /^[a-zA-Z]+$/;
-    // Checking if firstName is empty
+    // Checking if firstName is empty or has numbers
     if(!firstName.value.match(noNumbers) || firstName.value.trim()===""){
         onError(firstName, "Please write a valid name");
         firstName.focus();
@@ -35,8 +33,8 @@ function validateInput() {
         onSucces(firstName);
     }
 
-     // Checking if lastName is empty
-     if(!lastName.value.match(noNumbers) || lastName.value.trim()===""){
+    // Checking if firstName is empty or has numbers
+    if(!lastName.value.match(noNumbers) || lastName.value.trim()===""){
         onError(lastName, "Please write a valid name");
         firstName.focus();
         return false;
