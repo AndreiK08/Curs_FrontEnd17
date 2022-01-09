@@ -13,7 +13,14 @@ const avatar3 = document.querySelector('#avatar-3');
 const avatar4 = document.querySelector('#avatar-4');
 const avatar5 = document.querySelector('#avatar-5');
 
+
+
 var checkedAvatar;
+var displayCheckedAvatar = [];
+
+var inputValues = [];
+
+
 
 
 form.addEventListener('submit', (event) => {
@@ -21,43 +28,83 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     // Validate all form elements and create comment box
-    if (!validateInput()){
+    if (validateInput()){
         console.log('Form not valid');
     } else {
         console.log('Form is good for new Comment div');
-        displayComments(name, comment, mail, avatar );
-        
-        // One function to create the div
-        
-        // get ul id - make it ""
 
-        // add a listitem with div inside class - comment box (flex + column) 
-        // div avatar + name input (h3) (flex + row) + mail (smaller gray)
-        // div comment text - wide and hight fixed
-        // div reply button
+        // Display Comments Function
+        function DisplayComments(name, comment, mail, avatar){
+            this.name = name;
+            this.comment = comment;
+            this.mail = mail;
+            this.avatar = avatar;
+        }
+
+        let comment = new DisplayComments(nameInput.value,commentInput.value,mailInput.value, displayCheckedAvatar)
+        console.log(comment.name);
+
+        var container = document.querySelector('.comment-container');
+
+        // If needed you can empty the div 
+        // container.innerHTML = '';
+
+        var card = document.createElement('ul');
+        card.style.listStyle = 'none';
+
+
+        // Closing button
+        var clearButton = document.createElement('button');
+        clearButton.id = '#clear-button';
+        clearButton.innerHTML = '<i class="fa fa-remove"></i>';
+ 
+
+
+        card.appendChild(clearButton);
+
+
+      
+        card.classList.add('card');
+        card.style.display = 'flex';
+        card.innerHTML += '<h3>' + comment.name + '</h3>';
+        card.innerHTML +='<p>' + comment.comment + '</p>';
+        card.innerHTML +='<p>' + comment.mail + '</p>';
+
+    
+
+
+        // Make card
+        container.appendChild(card);
+                                        
+
+
+        // Saving new comment in an array, for storring
+        inputValues.push(comment);
+        // console.log(inputValues);
+
+
     }
-
+    
 })
+
+
 
 
 
 // Form Validation
 function validateInput(){
     // Checking if inputs are empty
-    if(nameInput.value.trim()==="" || commentInput.value.trim()==="" || ValidateEmail(mailInput) === false || returnCheckedAvatar() !== true){
+    if(nameInput.value.trim()==="" || commentInput.value.trim()==="" || ValidateEmail(mailInput) == true || returnCheckedAvatar() !== true){
         nameInput.style.border = "1px solid red";
         commentInput.style.border = "1px solid red";
         mailInput.style.border = "1px solid red";
 
-        console.log("NOT GOOD");
+        console.log("Please verify to have a valid input");
 
     } else {
         nameInput.style.border = "1px solid green";
         commentInput.style.border = "1px solid green";
         mailInput.style.border = "1px solid green";
-        console.log('Avatar is checked');
-        console.log("All imputs are good");
-        return true;
     }
 
 
@@ -78,46 +125,33 @@ function ValidateEmail(mail)
 
 
 // Checking if any Avatar is selected
+// WORK IN PROGRESS --- Displaying the returned checked avatar!
 function returnCheckedAvatar(){
     if (avatar1.checked ){
         console.log("Avatar ok1");
         // Save chacked radio button
         checkedAvatar = avatar1.checked;
-        // **************De adaugat icoana in dvi-ul de commnent 
-        console.log(checkedAvatar);
+        
+        
     } else if (avatar2.checked ){
         console.log("Avatar ok2");
         checkedAvatar = avatar2.checked;
-        console.log(checkedAvatar);
+        
     } else if (avatar3.checked ){
         console.log("Avatar ok3");
-
         checkedAvatar = avatar3.checked;
-        console.log(checkedAvatar);
+        
     } else if (avatar4.checked ){
         console.log("Avatar ok4");
-
         checkedAvatar = avatar4.checked;
-        console.log(checkedAvatar);
+
     } else if (avatar5.checked ){
         console.log("Avatar ok5");
-
         checkedAvatar = avatar5.checked;
-        console.log(checkedAvatar);
+
     } else {
         alert('Please choose an avatar')
     }
     // Return if radio button is checked
     return checkedAvatar;
 }
-
-// post.addEventListener("click", function(){
-//     var commentBoxValue = document.getElementById("comment-box").value;
- 
-//     var li = document.createElement("li");
-//     var text = document.createTextNode(commentBoxValue);
-//     li.appendChild(text);
-//     document.getElementById("unordered").appendChild(li);
- 
-// });
-
